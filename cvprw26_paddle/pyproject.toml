@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "disaster_maskrcnn_paddle"
+version = "0.0.1"
+description = "BRIGHT Challenge Mask R-CNN baseline (PaddlePaddle version)"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = [
+    "numpy==1.26.4",
+    "paddlepaddle-gpu>=2.6.0",
+    "rasterio",
+    "tifffile",
+    "scikit-image",
+    "pycocotools",
+    "faster-coco-eval",
+    "pyyaml",
+    "opencv-python-headless",
+    "supervision",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
